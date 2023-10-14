@@ -20,9 +20,9 @@ Confidence:     10.021
 Full pipeline,按照顺序把三个都跑一遍:
 ```
 sh download_model.sh
-python run_pipeline.py --videofile /path/to/video.mp4 --reference name_of_video --data_dir /path/to/output
-python run_syncnet.py --videofile /path/to/video.mp4 --reference name_of_video --data_dir /path/to/output
-python run_visualise.py --videofile /path/to/video.mp4 --reference name_of_video --data_dir /path/to/output
+python run_pipeline.py --videofile data/yourvideo.avi --reference yourvideo 
+python run_syncnet.py --videofile data/yourvideo.avi --reference yourvideo 
+python run_visualise.py --videofile data/yourvideo.avi --reference yourvideo
 ```
 
 Outputs:
