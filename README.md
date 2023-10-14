@@ -10,6 +10,7 @@ Please cite the paper below if you make use of the software.
 ```
 pip install -r requirements.txt
 ```
+python 37
 
 In addition, `ffmpeg` is required.
 
