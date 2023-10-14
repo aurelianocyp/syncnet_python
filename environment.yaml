@@ -49,3 +49,4 @@ dependencies:
     - typing-extensions==4.7.1
     - urllib3==2.0.6
     - zipp==3.15.0
+    - pandas
