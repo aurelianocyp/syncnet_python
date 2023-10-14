@@ -26,9 +26,9 @@ python run_visualise.py --videofile data/$id.mp4 --reference $id
 
 Outputs:
 ```
-data/work/pycrop/$REFERENCE/*.avi - cropped face tracks
-data/work/pywork/$REFERENCE/offsets.txt - audio-video offset values
-data/work/pyavi/$REFERENCE/video_out.avi - output video (as shown below)
+data/work/pycrop/$id/*.avi - cropped face tracks
+data/work/pywork/$id/offsets.txt - audio-video offset values
+data/work/pyavi/$id/video_out.avi - output video (as shown below)
 ```
 <p align="center">
   <img src="img/ex1.jpg" width="45%"/>
