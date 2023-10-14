@@ -43,6 +43,7 @@ for idx, fname in enumerate(flist):
     i += 1
     dists.append(dist)
 offset_pd = pd.DataFrame(offset_list, columns=['frame', 'syncnet_offset'])
+offset_pd.to_csv(opt.reference+'offset.csv',index=False)
       
 # ==================== PRINT RESULTS TO FILE ====================
 
