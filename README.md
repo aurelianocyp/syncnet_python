@@ -16,10 +16,9 @@ AV offset:      3
 Min dist:       5.353
 Confidence:     10.021
 ```
-
+准备文件：sh download_model.sh
 Full pipeline,按照顺序把三个都跑一遍:
 ```
-sh download_model.sh
 python run_pipeline.py --videofile data/$id.mp4 --reference $id
 python run_syncnet.py --videofile data/$id.mp4 --reference $id
 python run_visualise.py --videofile data/$id.mp4 --reference $id
