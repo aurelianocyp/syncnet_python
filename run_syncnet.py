@@ -2,6 +2,7 @@
 #-*- coding: utf-8 -*-
 
 import time, pdb, argparse, subprocess, pickle, os, gzip, glob
+import pandas as pd
 
 from SyncNetInstance import *
 
