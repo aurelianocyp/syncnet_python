@@ -1,27 +1,15 @@
-# SyncNet
-
-This repository contains the demo for the audio-to-video synchronisation network (SyncNet). This network can be used for audio-visual synchronisation tasks including: 
-1. Removing temporal lags between the audio and visual streams in a video;
-2. Determining who is speaking amongst multiple faces in a video. 
-
-Please cite the paper below if you make use of the software. 
-
 ## Dependencies
 ```
-pip install -r requirements.txt
+environment.yml
 ```
 python 37
-
 In addition, `ffmpeg` is required.
 
-
-## Demo
-
-SyncNet demo:
+## check environment
+run SyncNet demo:
 ```
 python demo_syncnet.py --videofile data/example.avi --tmp_dir /path/to/temp/directory
 ```
-
 Check that this script returns:
 ```
 AV offset:      3 
@@ -29,7 +17,7 @@ Min dist:       5.353
 Confidence:     10.021
 ```
 
-Full pipeline:
+Full pipeline,按照顺序把三个都跑一遍:
 ```
 sh download_model.sh
 python run_pipeline.py --videofile /path/to/video.mp4 --reference name_of_video --data_dir /path/to/output
@@ -48,13 +36,3 @@ $DATA_DIR/pyavi/$REFERENCE/video_out.avi - output video (as shown below)
   <img src="img/ex2.jpg" width="45%"/>
 </p>
 
-## Publications
- 
-```
-@InProceedings{Chung16a,
-  author       = "Chung, J.~S. and Zisserman, A.",
-  title        = "Out of time: automated lip sync in the wild",
-  booktitle    = "Workshop on Multi-view Lip-reading, ACCV",
-  year         = "2016",
-}
-```
