@@ -36,15 +36,9 @@ flist.sort()
 # ==================== GET OFFSETS ====================
 
 dists = []
-offset_list = []
-i = 0
 for idx, fname in enumerate(flist):
     offset, conf, dist = s.evaluate(opt, videofile=fname)
-    offset_list.append([i, offset])
-    i += 1
     dists.append(dist)
-offset_pd = pd.DataFrame(offset_list, columns=['frame', 'syncnet_offset'])
-offset_pd.to_csv(opt.reference+'_offset.csv',index=False)
       
 # ==================== PRINT RESULTS TO FILE ====================
 
