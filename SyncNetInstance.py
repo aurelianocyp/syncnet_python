@@ -131,6 +131,8 @@ class SyncNetInstance(torch.nn.Module):
         #dists是由许多tensor组成的list，其中每个tensor含有31个值
         mdist = torch.mean(torch.stack(dists,1),1)
         #torch.stack(dists,1)是31*5997的tensor，即类似array的格式
+        print("*************************shape annotation******************************")
+        print(torch.stack(dists,1).shape)
         minval, minidx = torch.min(mdist,0)
         """
         mdist:一共31个
