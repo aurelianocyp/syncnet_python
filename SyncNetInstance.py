@@ -131,7 +131,13 @@ class SyncNetInstance(torch.nn.Module):
         mdist = torch.mean(torch.stack(dists,1),1)
         #torch.stack(dists,1)是31*5997的tensor，即类似array的格式
         minval, minidx = torch.min(mdist,0)
-
+        """
+        mdist:
+        tensor([15.6496, 15.6937, 15.7152, 15.6658, 15.6031, 15.4888, 15.3193, 15.1502,
+        15.0911, 15.2173, 15.5253, 15.8676, 15.8066, 14.5817, 11.6069,  7.5897,
+         6.8693, 10.4948, 13.6736, 15.1612, 15.4597, 15.3511, 15.1951, 15.1057,
+        15.0959, 15.1591, 15.3167, 15.5067, 15.6768, 15.7799, 15.7471])
+        """
         offset = opt.vshift-minidx
         conf   = torch.median(mdist) - minval
 
