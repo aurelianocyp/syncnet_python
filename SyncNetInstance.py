@@ -127,6 +127,7 @@ class SyncNetInstance(torch.nn.Module):
         print('Compute time %.3f sec.' % (time.time()-tS))
 
         dists = calc_pdist(im_feat,cc_feat,vshift=opt.vshift)
+        #dists是由许多tensor组成的list，其中每个tensor含有31个值
         mdist = torch.mean(torch.stack(dists,1),1)
 
         minval, minidx = torch.min(mdist,0)
