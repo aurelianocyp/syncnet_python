@@ -101,6 +101,7 @@ class SyncNetInstance(torch.nn.Module):
         # ========== ==========
 
         lastframe = min_length-5
+        # 这里减了5，所以后面是5997而不是6002
         im_feat = []
         cc_feat = []
 
