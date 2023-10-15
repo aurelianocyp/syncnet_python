@@ -129,7 +129,7 @@ class SyncNetInstance(torch.nn.Module):
         dists = calc_pdist(im_feat,cc_feat,vshift=opt.vshift)
         #dists是由许多tensor组成的list，其中每个tensor含有31个值
         mdist = torch.mean(torch.stack(dists,1),1)
-
+        #torch.stack(dists,1)是31*5997的tensor，即类似array的格式
         minval, minidx = torch.min(mdist,0)
 
         offset = opt.vshift-minidx
