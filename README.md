@@ -3,7 +3,6 @@
 environment.yml
 ```
 python 37
-In addition, `ffmpeg` is required.
 
 ## check environment
 run SyncNet demo:
